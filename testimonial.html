@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="navbar">
+  
+          <div class="menu">
+  
+            <h2 class="logo"><img src="relogo.png" alt=""></h2>
+  
+            <div class="hamburger-menu">
+  
+              <div class="bar"></div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+        <div class="main-container">
+  
+          <div class="main">
+  
+            <header>
+  
+              <div class="overlay">
+  
+                <div class="inner">
+  
+                  
+                  <section class="testimonial">
+                    <div class="monial">
+                     <h3>Reviews</h3>
+                     <div class="testimonial-text">
+                       <div class="user-text">
+                         <i class="fas fa-quote-left"></i>
+                         <p>One of the main advantages Rebar have over other resturants is their commitment to serving top notch meals consistently.</p>
+                         <span>Mr Oliver Osaro</span>
+                       </div>
+                       <div class="user-text active-text">
+                         <i class="fas fa-quote-left"></i>
+                         <p>I like the Location and appearance of this restaurant, but what i love most about Rebar is their cocktails, its unique.</p>
+                         <span>Mrs Loveth Anyanwu</span>
+                       </div>
+                       <div class="user-text">
+                         <i class="fas fa-quote-left"></i>
+                         <p>Apart from their delicious food, one thing i noticed about this restaurant is the friendly nature of their workers. I think their customer service is excellent.</p>
+                         <span>Mr Samson Jibola</span>
+                       </div>
+                       <div class="user-text">
+                         <i class="fas fa-quote-left"></i>
+                         <p>One thing i like most about Rebar is the quality of their food and drinks, its simply amazing.</p>
+                         <span>Mrs Tega Umukoro</span>
+                       </div>
+                       <div class="user-text">
+                         <i class="fas fa-quote-left"></i>
+                         <p>The environment of this restaurant compliments their great food, i love this place and am going to be a regular customer.</p>
+                         <span>Mr Nathan Omoraro</span>
+                       </div>
+                     </div>
+                     <div class="testimonial-pic">
+                       <img src="og.PNG" class="user-pic" onclick="showReview()">
+                       <img src="r2.PNG" class="user-pic active-pic" onclick="showReview()">
+                       <img src="r3.PNG" class="user-pic" onclick="showReview()">
+                       <img src="r1.PNG" class="user-pic" onclick="showReview()">
+                       <img src="r4.PNG" class="user-pic" onclick="showReview()">
+                     </div>
+                   </div>
+                    </section>
+  
+                  
+                  
+  
+                </div>
+  
+              </div>
+  
+            </header>
+  
+          </div>
+  
+          <div class="shadow one"></div>
+  
+          <div class="shadow two"></div>
+  
+        </div>
+  
+        <div class="links">
+  
+          <ul>
+  
+            <li>
+  
+              <a href="index.html" style="--i: 0.05s;">Home</a>
+  
+            </li>
+  
+            <li>
+  
+              <a href="service.html" style="--i: 0.1s;">Services</a>
+  
+            </li>
+  
+            <li>
+  
+              <a href="gallery.html" style="--i: 0.15s;">Gallery</a>
+  
+            </li>
+  
+            <li>
+  
+              <a href="testimonial.html" style="--i: 0.2s;">Testimonials</a>
+  
+            </li>
+  
+            <li>
+  
+              <a href="about.html" style="--i: 0.25s;">About</a>
+  
+            </li>
+  
+            <li>
+  
+              <a href="contact.html" style="--i: 0.3s;">Contact</a>
+  
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </div>
+
+      <script>
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+    
+        function showReview(){
+        for(userPic of userPics){
+            userPic.classList.remove("active-pic");
+        }
+        for(userText of userTexts){
+            userText.classList.remove("active-text");
+        }
+        let i = Array.from(userPics).indexOf(event.target);
+    
+        userPics[i].classList.add("active-pic");
+        userTexts[i].classList.add("active-text");
+       }
+    
+      </script>
+
+
+    <script src="rebar.js"></script>
+</body>
+</html>
